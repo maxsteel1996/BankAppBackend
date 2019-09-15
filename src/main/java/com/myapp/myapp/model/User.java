@@ -11,7 +11,7 @@ import lombok.Data;
 @Entity
 @Inheritance
 @Data
-public abstract class User {
+public class User {
 
 	@Id
 	String userName;

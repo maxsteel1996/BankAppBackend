@@ -8,6 +8,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.myapp.myapp.model.Admin;
 import com.myapp.myapp.model.Appointment;
 import com.myapp.myapp.model.AppointmentStatus;
 import com.myapp.myapp.model.Branch;
@@ -21,6 +22,7 @@ import com.myapp.myapp.repository.BranchHeadRepository;
 import com.myapp.myapp.repository.BranchRepository;
 import com.myapp.myapp.repository.HNICustomerRepository;
 import com.myapp.myapp.repository.StaffRepository;
+import com.myapp.myapp.repository.UserRepository;
 
 @Component
 public class SaveSampleDataOnStartup {
@@ -35,6 +37,9 @@ public class SaveSampleDataOnStartup {
 	AppointmentRepository appointmentRepo;
 	@Autowired
 	HNICustomerRepository hniCustomerRepo;
+	
+	@Autowired
+	UserRepository userRepo;
 
 	@PostConstruct
 	public void saveData() {
@@ -140,6 +145,14 @@ public class SaveSampleDataOnStartup {
 		// -------------Adding Sample Data for HNICustomer-------------------
 		HNICustomer hnicustomer = new HNICustomer(1L, "Ankit","9873797189","3000000");
 		hniCustomerRepo.save(hnicustomer);	
+		
+		/***************Adding data for Admin *******************************/
+		Admin admin = new Admin();
+    admin.setUserName("admin");
+    admin.setName("Administrator");
+    admin.setPassword("1234");
+    admin.setRole(Role.ADMIN);
+    userRepo.save(admin);
 	}
 
 }

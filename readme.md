@@ -72,7 +72,55 @@ API VI. PUT /branch_head/reassign_staff  -  Branch Head - Reassign Staff
 	    "id" : "7",
 	    "username" : "staff2@gmail.com"
    }
+   
+   
+Administrator API's
 
+API VII. GET /users - Get list of all users (Branch heads and staffs)
+   Basic Authorization Required
+   Username: admin
+   Password: 1234
+   
+API VIII. POST /users Add user (Branch Head or staff)
+   Basic Authorization Required
+   Username: admin
+   Password: 1234
+   Request Body
+   Type : application/json
+   {
+	    "userName": "staff3@gmail.com",
+	    "name": "Staff 3",
+	    "phone": 9898767654,
+	    "password": "1234",
+	    "role": "STAFF",
+	    "branch": null
+   }
+
+API IX GET /user/{username}	Get the details of a single user basis their username Ex: /users/staff1@gmail.com
+Basic Authorization Required
+   Username: admin
+   Password: 1234
+
+API X DELETE /user/{username}	Delete the details of a single user basis their username Ex: /users/staff1@gmail.com
+Basic Authorization Required
+   Username: admin
+   Password: 1234
+
+API XI. PUT /users Update any user details (Branch Head or staff)
+   Basic Authorization Required
+   Username: admin
+   Password: 1234
+   Request Body
+   Type : application/json
+   {
+	    "userName": "staff3@gmail.com",
+	    "name": "Staff 3",
+	    "phone": 9898777444,
+	    "password": "1234",
+	    "role": "STAFF",
+	    "branch": null
+   }
+   
 Note : API's for customer do not need any authorization
 
 If you want to run the application on the local system, then please ensure you meet the following software requirements.

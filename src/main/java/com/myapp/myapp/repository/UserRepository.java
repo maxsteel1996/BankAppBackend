@@ -8,4 +8,5 @@ import com.myapp.myapp.model.User;
 @Repository
 public interface UserRepository extends CrudRepository<User, String> {
 
+  
 }
