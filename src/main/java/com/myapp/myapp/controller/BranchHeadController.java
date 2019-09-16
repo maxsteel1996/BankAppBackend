@@ -48,7 +48,7 @@ public class BranchHeadController {
       return null;
     BranchHead branchHead = (BranchHead) obj;
     try {
-      return branchHeadService.getAllBranchAppointmentsForToday(branchHead.getOwnedBranches());
+      return branchHeadService.getAllBranchAppointmentsForToday(branchHead.getBranch());
     } catch (Exception e) {
       e.printStackTrace();
     }

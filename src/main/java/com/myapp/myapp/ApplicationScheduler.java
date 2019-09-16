@@ -43,7 +43,7 @@ public class ApplicationScheduler {
     for (Branch branch : branchList) {
       BranchHead branchHead = branchHeadService.getBranchHead(branch);
       List<Appointment> appointments = branchHeadService
-          .getAllBranchAppointmentsForToday(branchHead.getOwnedBranches());
+          .getAllBranchAppointmentsForToday(branchHead.getBranch());
       for (Appointment appointment : appointments) {
         sendEmail(branchHead, appointment.getCustomer(), appointment);
       }

@@ -12,7 +12,7 @@ import com.myapp.myapp.model.Role;
 @Repository
 public interface BranchHeadRepository extends CrudRepository<BranchHead, String> {
 
-	public BranchHead findByOwnedBranches(Branch branch);
+	public BranchHead findByBranch(Branch branch);
 	
 	public Branch findByUserNameAndRole(String branchHeadUserName, Role role);
 

@@ -63,11 +63,7 @@ public class SaveSampleDataOnStartup {
 		branchHead1.setUserName("sanchitgarg2012@gmail.com");
 		branchHead1.setPassword("1234");
 		branchHead1.setRole(Role.BRANCH_HEAD);
-		branchHead1.setOwnedBranches(new ArrayList<Branch>() {
-			{
-				add(br1);
-			}
-		});
+		branchHead1.setBranch(br1);
 		branchHeadRepository.save(branchHead1);
 		
 		BranchHead branchHead2 = new BranchHead();
@@ -75,11 +71,7 @@ public class SaveSampleDataOnStartup {
 		branchHead2.setUserName("branchhead2@gmail.com");
 		branchHead2.setPassword("1234");
 		branchHead2.setRole(Role.BRANCH_HEAD);
-		branchHead2.setOwnedBranches(new ArrayList<Branch>() {
-      {
-        add(br2);
-      }
-    });
+		branchHead2.setBranch(br2);
 		branchHeadRepository.save(branchHead2);
 		
 		BranchHead branchHead3 = new BranchHead();
@@ -87,11 +79,7 @@ public class SaveSampleDataOnStartup {
     branchHead3.setUserName("branchhead3@gmail.com");
     branchHead3.setPassword("1234");
     branchHead3.setRole(Role.BRANCH_HEAD);
-    branchHead3.setOwnedBranches(new ArrayList<Branch>() {
-      {
-        add(br3);
-      }
-    });
+    branchHead3.setBranch(br3);
     branchHeadRepository.save(branchHead3);
     
     BranchHead branchHead4 = new BranchHead();
@@ -99,11 +87,7 @@ public class SaveSampleDataOnStartup {
     branchHead4.setUserName("branchhead4@gmail.com");
     branchHead4.setPassword("1234");
     branchHead4.setRole(Role.BRANCH_HEAD);
-    branchHead4.setOwnedBranches(new ArrayList<Branch>() {
-      {
-        add(br4);
-      }
-    });
+    branchHead4.setBranch(br4);
     branchHeadRepository.save(branchHead4);
     
     BranchHead branchHead5 = new BranchHead();
@@ -111,11 +95,7 @@ public class SaveSampleDataOnStartup {
     branchHead5.setUserName("branchhead5@gmail.com");
     branchHead5.setPassword("1234");
     branchHead5.setRole(Role.BRANCH_HEAD);
-    branchHead5.setOwnedBranches(new ArrayList<Branch>() {
-      {
-        add(br5);
-      }
-    });
+    branchHead5.setBranch(br5);
     branchHeadRepository.save(branchHead5);
 
 		// -------------Adding Sample Data for Staff-----------------

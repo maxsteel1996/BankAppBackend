@@ -15,7 +15,7 @@ public interface AppointmentRepository extends CrudRepository<Appointment, Long>
 	
   public List<Appointment> findByStaffAndDate(Staff staff, Date date);
 	
-	public List<Appointment> findAllByBranchInAndDate(List<Branch> ownedBranches, Date date);
+	public List<Appointment> findByBranchAndDate(Branch branch, Date date);
 	
 	public Long countByStaffAndDate(Staff staff, Date date);
 }

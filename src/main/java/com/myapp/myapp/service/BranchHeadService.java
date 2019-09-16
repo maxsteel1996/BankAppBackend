@@ -32,15 +32,15 @@ public class BranchHeadService {
 	StaffService staffService;
   
   public BranchHead getBranchHead(Branch branch) {
-    return branchHeadRepository.findByOwnedBranches(branch);
+    return branchHeadRepository.findByBranch(branch);
   }
   
   public Branch findBranchbyBranchHeadUserName(String branchHeadUserName) {
     return branchHeadRepository.findByUserNameAndRole(branchHeadUserName, Role.BRANCH_HEAD);
   }
 
-	public List<Appointment> getAllBranchAppointmentsForToday(List<Branch> ownedBranches) {
-		return appointmentRepo.findAllByBranchInAndDate(ownedBranches, new Date());
+	public List<Appointment> getAllBranchAppointmentsForToday(Branch branch) {
+		return appointmentRepo.findByBranchAndDate(branch, new Date());
 	}
 	
 	public List<Staff> findStaffByBranch(Branch branch){
